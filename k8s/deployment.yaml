@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: url-shortener
-        image: gcr.io/YOUR_PROJECT_ID/url-shortener:latest
+        image: gcr.io/natural-expanse-458312-p6/url-shortener:latest
         ports:
         - containerPort: 5000
         env:
         - name: DB_HOST
-          value: "YOUR_VM_IP_ADDRESS"
+          value: "34.58.226.13"
         - name: DB_PORT
           value: "5432"
         - name: DB_NAME
@@ -30,9 +30,18 @@ spec:
           value: "url_user"
         - name: DB_PASSWORD
           value: "url_pass"
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "128Mi"
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
         readinessProbe:
           httpGet:
             path: /health
             port: 5000
           initialDelaySeconds: 5
           periodSeconds: 10
+      #imagePullSecrets:
+      #- name: regcred
