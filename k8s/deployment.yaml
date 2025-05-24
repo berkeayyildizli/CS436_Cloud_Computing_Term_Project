@@ -21,7 +21,7 @@ spec:
         - containerPort: 5000
         env:
         - name: DB_HOST
-          value: "34.58.226.13"
+          value: "34.31.205.2"
         - name: DB_PORT
           value: "5432"
         - name: DB_NAME
@@ -32,7 +32,7 @@ spec:
           value: "url_pass"
         resources:
           requests:
-            cpu: "50m"
+            cpu: "250m"
             memory: "128Mi"
           limits:
             cpu: "250m"
