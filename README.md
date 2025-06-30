@@ -69,7 +69,7 @@ sudo apt install postgresql postgresql-contrib
 # Create DB and user
 sudo -u postgres psql
 CREATE DATABASE url_shortener;
-CREATE USER url_user WITH ENCRYPTED PASSWORD 'url_pass';
+CREATE USER <your_user> WITH ENCRYPTED PASSWORD '<your_password>';
 GRANT ALL PRIVILEGES ON DATABASE url_shortener TO url_user;
 \q
 
@@ -233,7 +233,8 @@ gcloud functions deploy shorten-url \
   --entry-point shorten_url \
   --region us-central1 \
   --allow-unauthenticated \
-  --set-env-vars DB_HOST=...,DB_PORT=5432,DB_NAME=url_shortener,DB_USER=url_user,DB_PASSWORD=url_pass
+  --set-env-vars DB_HOST=<your_db_ip>,DB_PORT=5432,DB_NAME=<your_db>,DB_USER=<your_user>,DB_PASSWORD=<your_pass>
+
 ```
 
 ---
