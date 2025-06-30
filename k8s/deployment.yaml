@@ -20,16 +20,12 @@ spec:
         ports:
         - containerPort: 5000
         env:
-        - name: DB_HOST
-          value: "34.31.205.2"
-        - name: DB_PORT
-          value: "5432"
-        - name: DB_NAME
-          value: "url_shortener"
-        - name: DB_USER
-          value: "url_user"
         - name: DB_PASSWORD
-          value: "url_pass"
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: password
+
         resources:
           requests:
             cpu: "250m"
