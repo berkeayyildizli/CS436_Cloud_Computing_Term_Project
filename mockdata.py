@@ -1,11 +1,12 @@
 import psycopg2
 
-# Replace with your actual credentials
-DB_HOST = "34.58.226.13"
-DB_PORT = "5432"
-DB_NAME = "url_shortener"
-DB_USER = "url_user"
-DB_PASSWORD = "url_pass"
+import os
+
+DB_HOST = os.environ["DB_HOST"]
+DB_PORT = os.environ["DB_PORT"]
+DB_NAME = os.environ["DB_NAME"]
+DB_USER = os.environ["DB_USER"]
+DB_PASSWORD = os.environ["DB_PASSWORD"]
 
 try:
     conn = psycopg2.connect(
