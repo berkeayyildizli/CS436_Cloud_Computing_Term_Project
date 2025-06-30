@@ -7,6 +7,12 @@ It includes:
 - A **Google Cloud Function** that generates and stores shortened URLs
 - A **PostgreSQL database** hosted on **Compute Engine (VM)**
 
+  ## 👨‍💻 Authors
+
+- [Berke Ayyıldızlı](https://github.com/berkeayyildizli)
+- [Beyza Balota](https://github.com/beyzabalota)
+- [Ozan Parlayan](https://github.com/parlayanozan)
+
 ---
 
 ## ⚙️ Architecture Overview
