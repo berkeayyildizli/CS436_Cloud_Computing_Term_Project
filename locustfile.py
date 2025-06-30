@@ -3,7 +3,7 @@ import random
 
 class UrlShortenerUser(HttpUser):
     wait_time = between(1, 3)
-    host = "https://shorten-url-591200849589.us-central1.run.app"  # 👈 Add your Cloud Run endpoint here
+    host = "https://<your-cloud-run-url>"  # 👈 Add your Cloud Run endpoint here
 
     @task(2)
     def shorten_url(self):
