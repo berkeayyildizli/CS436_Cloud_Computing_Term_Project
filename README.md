@@ -1,3 +1,4 @@
+# CS436 Cloud Computing Course Term Project
 # URL Shortener - Cloud Native Application
 
 A cloud-native URL shortener system deployed on **Google Cloud Platform (GCP)**.
