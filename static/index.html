@@ -43,7 +43,7 @@
       resultDiv.innerText = "Loading...";
 
       try {
-        const response = await fetch("https://shorten-url-591200849589.us-central1.run.app", {
+        const response = await fetch("https://<YOUR_CLOUD_RUN_URL>", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ url: longUrl }),
